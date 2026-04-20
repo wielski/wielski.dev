@@ -1,0 +1,13 @@
+{
+  "name": "wielski.dev",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build index.html --outdir=dist --target=browser --minify --external 'three' --external 'three/webgpu' --external 'three/tsl' --external 'three/addons/*'",
+    "dev": "bun --hot index.html"
+  },
+  "dependencies": {
+    "@types/three": "^0.184.0",
+    "three": "^0.183.0"
+  }
+}

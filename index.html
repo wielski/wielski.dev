@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrzej Wielski</title>
+  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.183.0/build/three.webgpu.js",
+        "three/webgpu": "https://unpkg.com/three@0.183.0/build/three.webgpu.js",
+        "three/tsl": "https://unpkg.com/three@0.183.0/build/three.tsl.js",
+        "three/addons/": "https://unpkg.com/three@0.183.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <canvas id="distortion"></canvas>
+  <canvas id="grass-canvas"></canvas>
+  <div class="mouse-glow" id="glow"></div>
+
+  <div class="container">
+    <div class="hero">
+      <h1><em>Hello!</em> I'm<br><span>Andrzej </span>Wielski</h1>
+      <div class="hero-tagline">
+        <span class="tagline-icon">🌿</span>
+        Touch the grass — let me do the hard work.
+      </div>
+    </div>
+
+    <div class="chat">
+      <div class="chat-row" data-row="1">
+        <div class="avatar"></div>
+        <div class="bubble intro">
+          Pleased to meet you, I'm your next software engineer.<br><br>
+          I build fast, reliable systems — from complex frontends to high-throughput backends. Currently based in
+          Tbilisi, open to remote work worldwide.
+        </div>
+      </div>
+
+      <div class="section-label" data-label="1">Technical stack</div>
+
+      <div class="chat-row" data-row="2">
+        <div class="avatar"></div>
+        <div class="bubble">
+          I work daily with a focused set of tools I know deeply. No fluff — just the things I ship production code
+          with.
+          <div class="stack-tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript-Guru</span>
+            <span class="tag">Golang</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-row" data-row="3">
+        <div class="avatar"></div>
+        <div class="bubble">
+          I've spent 14+ years refining these. React for complex interfaces, TypeScript for type-safe everything, Go for
+          services that need to be fast and boring in the best way.
+        </div>
+      </div>
+
+      <div class="section-label" data-label="2">Rate</div>
+
+      <div class="chat-row" data-row="4">
+        <div class="avatar"></div>
+        <div class="bubble">
+          <div class="price-line">$75 <span style="font-size:16px;font-weight:400;color:var(--text-dim)">/ hr</span>
+          </div>
+          <div class="price-sub"><span class="status-dot"></span>Available for contract work — starting anytime</div>
+        </div>
+      </div>
+
+      <div class="section-label" data-label="3">Get in touch</div>
+
+      <div class="chat-row" data-row="5">
+        <div class="avatar"></div>
+        <div class="bubble">
+          Prefer email for anything longer than a sentence. DMs work too if you want to keep it quick.
+          <div class="contact-links">
+          <a href="mailto:hello@wielski.dev" class="contact-link">hello@wielski.dev <span class="arrow">→</span></a>
+          <a href="https://github.com/wielski" class="contact-link" target="_blank" rel="noopener">github.com/wielski <span class="arrow">→</span></a>
+          <a href="https://t.me/wielski" class="contact-link" target="_blank" rel="noopener">t.me/wielski <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.ts"></script>
+  <script type="module" src="./src/grass.ts"></script>
+</body>
+</html>
